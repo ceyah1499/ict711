@@ -1,0 +1,1 @@
+add name James Bloggs; birthday 20/12/1978; pass Gold; mobile 04111111; fee $60

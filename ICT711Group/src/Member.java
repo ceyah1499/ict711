@@ -14,6 +14,14 @@ public class Member {
 		this.fee = fee;
 	}
 	
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
+
 	public String getName() {
 		return name;
 	}
