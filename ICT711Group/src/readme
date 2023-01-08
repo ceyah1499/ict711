@@ -12,6 +12,14 @@ https://trello.com/b/C3APLhJm/ict711-health-club-membership-management-system
 
 Changelog
 
+Jan 08 2023
+-Some bugfixes and added readme file:
+
+Fixed a small logic error on ReadFile.java
+
+Fixed extra whitespace typo on ReadFromInstructionFile.java
+
+
 Jan 07 2023
 -Create InstructionFile.java
 -Some refactoring, added helper methods for draft:
@@ -19,8 +27,10 @@ Jan 07 2023
 ReadFromInstructionFile.java
 Added skeletons for getMember() and deleteMember() methods in MembersDatabase class to help aid visualize the solution
 
+
 Jan 02 2023
 -Adding ReadFile.java
+
 
 Dec 21 2022
 -Create Member and MembersDatabase classes:
@@ -33,6 +43,7 @@ Wrote a constructor on Member class that
 takes all the parameters and an addNewMember() method on MembersDatabase class 
 to insert a new object of type Member to the membersList.
 
+
 Dec 20 2022
 -Test changes in script
 -Test changes in Script 2
@@ -40,10 +51,12 @@ Dec 20 2022
 
 Made a small change in the main script to demonstrate how versioning works.
 
+
 Dec 17 2022
 -Test upload Java project:
 
 Setting up the repository with an empty Java project for other group members to clone later.
+
 
 Nov 19 2022
 -Initial commit
