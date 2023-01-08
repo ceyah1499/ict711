@@ -1,0 +1,49 @@
+12203441 Oscar
+12203572 Sergey
+12203106 Likhan
+12203479 Angelo
+12203579 Jona
+
+Github link:
+https://github.com/ceyah1499/ict711
+
+Trello link:
+https://trello.com/b/C3APLhJm/ict711-health-club-membership-management-system
+
+Changelog
+
+Jan 07 2023
+-Create InstructionFile.java
+-Some refactoring, added helper methods for draft:
+
+ReadFromInstructionFile.java
+Added skeletons for getMember() and deleteMember() methods in MembersDatabase class to help aid visualize the solution
+
+Jan 02 2023
+-Adding ReadFile.java
+
+Dec 21 2022
+-Create Member and MembersDatabase classes:
+
+Made a Member class to be used as blueprint, 
+and MembersDatabase class that initialize 
+an ArrayList of type Member called membersList.
+
+Wrote a constructor on Member class that 
+takes all the parameters and an addNewMember() method on MembersDatabase class 
+to insert a new object of type Member to the membersList.
+
+Dec 20 2022
+-Test changes in script
+-Test changes in Script 2
+-Update Run.java
+
+Made a small change in the main script to demonstrate how versioning works.
+
+Dec 17 2022
+-Test upload Java project:
+
+Setting up the repository with an empty Java project for other group members to clone later.
+
+Nov 19 2022
+-Initial commit

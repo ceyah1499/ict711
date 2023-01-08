@@ -5,6 +5,7 @@ import java.util.Scanner; // Import the Scanner class to read text files
 public class ReadFile {
   public static void main(String[] args) {
     try {
+   
       File myObj = new File("src/instructions.txt");
       Scanner myReader = new Scanner(myObj);
       MembersDatabase myDatabase = new MembersDatabase();
@@ -46,10 +47,10 @@ public class ReadFile {
 		int index = -1;
 		index = myDatabase.getMember(object.getName(), object.getMobile());
 
-		if(index != 0){
-		myDatabase.updateMember(index, object);
-		}else{
-		myDatabase.addNewMember(object);
+		if(index == -1) {
+			myDatabase.addNewMember(object);
+		} else {
+			myDatabase.updateMember(index, object);
 		}
       }
       myReader.close();

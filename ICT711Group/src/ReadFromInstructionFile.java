@@ -43,7 +43,7 @@ public class ReadFromInstructionFile {
 	
 	// might be necessary
 	public Member converterForAdd(String data) {
-		String[] myArray2 = data.split("; ");
+		String[] myArray2 = data.split(";");
         for (int i = 0; i < myArray2.length; i++) {
 	        String[] myArray3 = myArray2[i].split(" ", 2);
 	        if (myArray3[0].equals("name")) {
@@ -61,4 +61,22 @@ public class ReadFromInstructionFile {
         }
         return member;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
