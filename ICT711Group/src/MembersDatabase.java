@@ -29,6 +29,5 @@ public class MembersDatabase {
 			// if delete successful return true;
 		}
 		/* else */ return false;
-		/* adding line for later - Angelo*/
 	}
 }
