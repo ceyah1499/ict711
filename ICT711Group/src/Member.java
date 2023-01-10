@@ -1,57 +1,67 @@
-public class Member {
-	
+public class Member 
+{
 	private String name;
 	private String birthday;
 	private String passType;
 	private String mobile;
 	private double fee;
 	
-	public Member(String name, String birthday, String passType, String mobile, double fee) {
+	public Member(String name, String birthday, String passType, String mobile, double fee) 
+	{
 		this.name = name;
 		this.birthday = birthday;
 		this.passType = passType;
 		this.mobile = mobile;
 		this.fee = fee;
 	}
+
+	public String getName() 
+	{
+		return name;
+	}
 	
-	public void setName(String name) {
+	public void setName(String name) 
+	{
 		this.name = name;
 	}
 
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public String getBirthday() {
+	public String getBirthday() 
+	{
 		return birthday;
 	}
 	
-	public String getPassType() {
+	public void setBirthday(String birthday) 
+	{
+		this.birthday = birthday;
+	}
+	
+	public String getPassType() 
+	{
 		return passType;
 	}
 
-	public void setPassType(String passType) {
+	public void setPassType(String passType) 
+	{
 		this.passType = passType;
 	}
 
-	public String getMobile() {
+	public String getMobile() 
+	{
 		return mobile;
 	}
 
-	public void setMobile(String mobile) {
+	public void setMobile(String mobile) 
+	{
 		this.mobile = mobile;
 	}
 
-	public double getFee() {
+	public double getFee() 
+	{
 		return fee;
 	}
 
-	public void setFee(double fee) {
+	public void setFee(double fee) 
+	{
 		this.fee = fee;
 	}
-	
 }
