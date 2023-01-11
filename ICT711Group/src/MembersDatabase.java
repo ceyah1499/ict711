@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 public class MembersDatabase 
 {
@@ -98,6 +101,8 @@ public class MembersDatabase
 	
 	public void runQueryAgeFee() 
 	{
+		LocalDate currentDate = LocalDate.now();
+		
 		double incomeA = 0; //0-8
 		double incomeB = 0; //8-18
 		double incomeC = 0; //18-65
@@ -106,7 +111,10 @@ public class MembersDatabase
 		
 		for (Member element: membersList) 
 		{
-			int age = 10;
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+			LocalDate birthdayDate = LocalDate.parse(element.getBirthday(), formatter);
+			Period intervalPeriod = Period.between(birthdayDate, currentDate);
+			int age = intervalPeriod.getYears();
 			
 			if (age >= 0 && age < 8)
 			{
@@ -140,7 +148,7 @@ public class MembersDatabase
 			"[18,65]: $" + incomeC + "\n" + 
 			"[65,-]: $" + incomeD + "\n" + 
 			"Unknown: $" + incomeE + "\n" + 
-			"----------------------\n"
+			"---------------------\n"
 		);
 	}
 }

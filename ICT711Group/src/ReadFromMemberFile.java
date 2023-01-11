@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class ReadFromMemberFile 
 {
-	static MembersDatabase membersDatabase = new MembersDatabase();
-
-	public static void main(String[] args) 
+	public void readFromFile(MembersDatabase membersDatabase) 
 	{
 		File file = new File("src/members.txt");
 	    try 
@@ -61,6 +59,6 @@ public class ReadFromMemberFile
 		}
 	    
 	    // Uncomment to check if method works
-	    // membersDatabase.printArrayList(membersDatabase.getAllMembers());
+	    membersDatabase.printArrayList(membersDatabase.getAllMembers());
 	}
 }
