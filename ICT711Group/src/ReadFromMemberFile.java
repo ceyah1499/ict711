@@ -60,6 +60,7 @@ public class ReadFromMemberFile
 			e.printStackTrace();
 		}
 	    
-	    membersDatabase.printArrayList(membersDatabase.getAllMembers());
+	    // Uncomment to check if method works
+	    // membersDatabase.printArrayList(membersDatabase.getAllMembers());
 	}
 }
