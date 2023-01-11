@@ -9,7 +9,24 @@ public class MembersDatabase
 		membersList = new ArrayList<Member>();
 	}
 	
-	public int getMember(String name, String mobile) 
+	public ArrayList<Member> getAllMembers() 
+	{
+		ArrayList<Member> copy = new ArrayList<Member>();
+		
+		for (Member element: membersList) 
+		{
+			copy.add(element);
+		}
+		
+		return copy;
+	}
+	
+	public int getCount() 
+	{
+		return membersList.size();
+	}
+	
+	public int getIndexOfMember(String name, String mobile) 
 	{
 		for (int i = 0; i < membersList.size(); i++) 
 		{
@@ -38,7 +55,7 @@ public class MembersDatabase
 	
 	public boolean deleteMember(String name, String mobile) 
 	{
-		int index = this.getMember(name, mobile);
+		int index = this.getIndexOfMember(name, mobile);
 		
 		if (index != -1) 
 		{
@@ -47,5 +64,83 @@ public class MembersDatabase
 		}
 		
 		return false;
+	}
+	
+	public void runQueryPassType(String passType) 
+	{
+		ArrayList<Member> copy = new ArrayList<Member>();
+		
+		for (Member element: membersList) 
+		{
+			if (element.getPassType().equals(passType)) 
+			{
+				copy.add(element);
+			}
+		}
+		
+		this.printArrayList(copy);
+	}
+	
+	public void printArrayList(ArrayList<Member> arrayList) 
+	{
+		for (Member element: arrayList) 
+		{
+			System.out.println
+			(
+				element.getName() + ", " + 
+				element.getBirthday() + ", " + 
+				element.getPassType() + ", " + 
+				element.getMobile() + ", " + 
+				"$" + element.getFee()
+			);
+		}
+	}
+	
+	public void runQueryAgeFee() 
+	{
+		double incomeA = 0; //0-8
+		double incomeB = 0; //8-18
+		double incomeC = 0; //18-65
+		double incomeD = 0; //65++
+		double incomeE = 0; //Unknown
+		
+		for (Member element: membersList) 
+		{
+			int age = 10;
+			
+			if (age >= 0 && age < 8)
+			{
+				incomeA += element.getFee();
+			}
+			else if (age >= 8 && age < 18)
+			{
+				incomeB += element.getFee();
+			}
+			else if (age >= 18 && age < 65)
+			{
+				incomeC += element.getFee();
+			}
+			else if (age >= 65)
+			{
+				incomeD += element.getFee();
+			}
+			else 
+			{
+				incomeE += element.getFee();
+			}
+		}
+		
+		System.out.println
+		(
+			"----query age fee----\n" + 
+			"Total Club Member size: " + this.getCount() + "\n" +
+			"Age based fee income distribution\n" + 
+			"[0,8]: $" + incomeA + "\n" + 
+			"[8,18]: $" + incomeB + "\n" + 
+			"[18,65]: $" + incomeC + "\n" + 
+			"[65,-]: $" + incomeD + "\n" + 
+			"Unknown: $" + incomeE + "\n" + 
+			"----------------------\n"
+		);
 	}
 }

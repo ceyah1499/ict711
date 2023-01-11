@@ -45,7 +45,7 @@ public class ReadFile {
 		System.out.println(object.getMobile());
 		System.out.println(object.getFee());
 		int index = -1;
-		index = myDatabase.getMember(object.getName(), object.getMobile());
+		index = myDatabase.getIndexOfMember(object.getName(), object.getMobile());
 
 		if(index == -1) {
 			myDatabase.addNewMember(object);
