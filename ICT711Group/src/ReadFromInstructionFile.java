@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class ReadFromInstructionFile {
 	
-	Member member = new Member("","","","",0);
+	static Member member = new Member("","","","",0);
 
-	public void main(String[] args) {
+	public static void main(String[] args) {
 		File file = new File("src/instructions.txt");
 	    try {
 			Scanner scan = new Scanner(file);
@@ -42,8 +42,8 @@ public class ReadFromInstructionFile {
 	}
 	
 	// might be necessary
-	public Member converterForAdd(String data) {
-		String[] myArray2 = data.split(";");
+	public static Member converterForAdd(String data) {
+		String[] myArray2 = data.split("; ");
         for (int i = 0; i < myArray2.length; i++) {
 	        String[] myArray3 = myArray2[i].split(" ", 2);
 	        if (myArray3[0].equals("name")) {
