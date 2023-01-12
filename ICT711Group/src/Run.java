@@ -1,10 +1,14 @@
 public class Run 
 {
+	static MembersDatabase membersDatabase = new MembersDatabase();
+	
 	public static void main(String[] args) 
 	{
-		MembersDatabase membersDatabase = new MembersDatabase();
-		ReadFromMemberFile rfmf = new ReadFromMemberFile();
-		rfmf.readFromFile(membersDatabase);
-		membersDatabase.runQueryAgeFee();
+		FileOperation fileOp = new FileOperation();
+		fileOp.readFromFile("src/members.txt");
+		fileOp.readFromFile("src/instructions.txt");
+		
+		// Uncomment to check if method works
+	    membersDatabase.printArrayList(membersDatabase.getAllMembers());
 	}
 }
