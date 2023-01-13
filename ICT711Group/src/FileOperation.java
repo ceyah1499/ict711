@@ -31,7 +31,7 @@ public class FileOperation
 		}
 	}
 	
-	public void lineProcessor(String data) 
+	private void lineProcessor(String data) 
 	{
 		String firstWord = data.substring(0, data.indexOf(" "));
 		String restOfString = data.substring(data.indexOf(" "));
