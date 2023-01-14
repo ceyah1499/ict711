@@ -33,8 +33,17 @@ public class FileOperation
 	
 	private void lineProcessor(String data) 
 	{
-		String firstWord = data.substring(0, data.indexOf(" "));
-		String restOfString = data.substring(data.indexOf(" "));
+		String firstWord = "";
+		String restOfString = "";
+		if(data.indexOf(" ") != -1) 
+		{
+			firstWord = data.substring(0, data.indexOf(" "));
+			restOfString = data.substring(data.indexOf(" ") + 1);
+		}
+		else 
+		{
+			firstWord = data;
+		}
 		
 		switch(firstWord) 
         {
@@ -88,7 +97,6 @@ public class FileOperation
 		
 		Member member = new Member(name,birthday,passType,mobile,fee);
 		int index = Run.membersDatabase.getIndexOfMember(member.getName(), member.getMobile());
-
 		if(index == -1) 
 		{
 			Run.membersDatabase.addNewMember(member);
@@ -103,9 +111,16 @@ public class FileOperation
 	{
 		String[] dataArray = new String[2];
 		dataArray = data.split("; ");
-		this.assigner(dataArray);
 		
-        Run.membersDatabase.deleteMember(name, mobile);
+		int index = Run.membersDatabase.getIndexOfMember(dataArray[0], dataArray[1]);
+		if(index == -1) 
+		{
+			// Delete unsuccessful
+		} 
+		else 
+		{
+			Run.membersDatabase.deleteMember(index);
+		}
 	}
 	
 	private void assigner(String[] dataArray) 
@@ -119,6 +134,7 @@ public class FileOperation
 		for(int i = 0; i < dataArray.length; i++) 
         {
 	        String[] tempArray = dataArray[i].split(" ", 2);
+	        
 	        if(tempArray[0].equals("name")) 
 	        {
 	        	name = tempArray[1];

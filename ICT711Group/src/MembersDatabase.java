@@ -56,32 +56,9 @@ public class MembersDatabase
 		membersList.get(index).setFee(member.getFee());
 	}
 	
-	public boolean deleteMember(String name, String mobile) 
+	public void deleteMember(int index) 
 	{
-		int index = this.getIndexOfMember(name, mobile);
-		
-		if (index != -1) 
-		{
-			membersList.remove(index);
-			return true;
-		}
-		
-		return false;
-	}
-	
-	public void runQueryPassType(String passType) 
-	{
-		ArrayList<Member> copy = new ArrayList<Member>();
-		
-		for (Member element: membersList) 
-		{
-			if (element.getPassType().equals(passType)) 
-			{
-				copy.add(element);
-			}
-		}
-		
-		this.printArrayList(copy);
+		membersList.remove(index);
 	}
 	
 	public void printArrayList(ArrayList<Member> arrayList) 
@@ -97,6 +74,21 @@ public class MembersDatabase
 				"$" + element.getFee()
 			);
 		}
+	}
+	
+	public void runQueryPassType(String passType) 
+	{
+		ArrayList<Member> copy = new ArrayList<Member>();
+		
+		for (Member element: membersList) 
+		{
+			if (element.getPassType().equals(passType)) 
+			{
+				copy.add(element);
+			}
+		}
+		
+		this.printArrayList(copy);
 	}
 	
 	public void runQueryAgeFee() 

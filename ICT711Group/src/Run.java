@@ -7,8 +7,9 @@ public class Run
 		FileOperation fileOp = new FileOperation();
 		fileOp.readFromFile("src/members.txt");
 		fileOp.readFromFile("src/instructions.txt");
+		membersDatabase.printArrayList(membersDatabase.getAllMembers());
 		
 		// Uncomment to check if method works
-	    membersDatabase.printArrayList(membersDatabase.getAllMembers());
+	    
 	}
 }
