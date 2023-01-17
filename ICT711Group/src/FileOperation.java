@@ -105,7 +105,16 @@ public class FileOperation
 		dataArray = data.split("; ");
 		this.assigner(dataArray);
 		
-        Run.membersDatabase.deleteMember(name, mobile);
+        boolean isSuccessful = Run.membersDatabase.deleteMember(name, mobile);
+        ReportingForDuty rfd = new ReportingForDuty();
+        if (isSuccessful) 
+        {
+        	rfd.writeToFile("src/results.txt", "Delete successful");
+        }
+        else 
+        {
+        	rfd.writeToFile("src/results.txt", "Delete unsuccessful because the name " + name + " with phone number " + mobile + " cannot be found on the records.");
+        }
 	}
 	
 	private void assigner(String[] dataArray) 
