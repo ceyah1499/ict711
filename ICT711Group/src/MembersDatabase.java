@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 public class MembersDatabase 
 {
 	private ArrayList<Member> membersList;
+	private FileOperation fileOp = new FileOperation();
 	
 	public MembersDatabase() 
 	{
@@ -61,34 +62,83 @@ public class MembersDatabase
 		membersList.remove(index);
 	}
 	
-	public void printArrayList(ArrayList<Member> arrayList) 
+	public String[] printArrayList(ArrayList<Member> arrayList) 
 	{
+		String[] stringArray = new String[arrayList.size()];
+		
+		int count = 0;
+		
 		for (Member element: arrayList) 
 		{
-			System.out.println
-			(
+			stringArray[count] =
 				element.getName() + ", " + 
 				element.getBirthday() + ", " + 
 				element.getPassType() + ", " + 
 				element.getMobile() + ", " + 
 				"$" + element.getFee()
-			);
+			;
+			count++;
 		}
+		
+		return stringArray;
+	}
+	
+	private void sortArrayList(ArrayList<Member> arrayList) 
+	{
+		MemberNameComparator nameComparator = new MemberNameComparator();
+		MemberMobileComparator mobileComparator = new MemberMobileComparator();
+		MemberFeeComparator feeComparator = new MemberFeeComparator();
+		
+		String[] stringArray = this.printArrayList(arrayList);
+		
+		// Before sorting
+		fileOp.writeToFile("src/reports.txt", "----Before sorting---");
+		for (String element: stringArray) 
+		{
+			fileOp.writeToFile("src/reports.txt", element);
+		}
+		fileOp.writeToFile("src/reports.txt", "---------------------\n");
+		
+		arrayList.sort(feeComparator);
+		arrayList.sort(mobileComparator);
+		arrayList.sort(nameComparator);
 	}
 	
 	public void runQueryPassType(String passType) 
 	{
 		ArrayList<Member> copy = new ArrayList<Member>();
+		double totalFee = 0;
 		
 		for (Member element: membersList) 
 		{
 			if (element.getPassType().equals(passType)) 
 			{
 				copy.add(element);
+				totalFee += element.getFee();
 			}
 		}
 		
-		this.printArrayList(copy);
+		this.sortArrayList(copy);
+		
+		String[] stringArray = this.printArrayList(copy);
+		
+		// After sorting
+		fileOp.writeToFile("src/reports.txt", "----After sorting----");
+		for (String element: stringArray) 
+		{
+			fileOp.writeToFile("src/reports.txt", element);
+		}
+		fileOp.writeToFile("src/reports.txt", "---------------------\n");
+		
+		fileOp.writeToFile
+		(
+				"src/reports.txt", 
+				"---query pass type---\n" + 
+				"Pass Type: " + passType + "\n" +
+				"Total Club Member size: " + copy.size() + "\n" +
+				"Total membership fees: $" + totalFee + "\n" +
+				"---------------------\n"
+		);
 	}
 	
 	public void runQueryAgeFee() 
@@ -130,8 +180,9 @@ public class MembersDatabase
 			}
 		}
 		
-		System.out.println
+		fileOp.writeToFile
 		(
+			"src/reports.txt", 
 			"----query age fee----\n" + 
 			"Total Club Member size: " + this.getCount() + "\n" +
 			"Age based fee income distribution\n" + 

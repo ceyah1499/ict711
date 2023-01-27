@@ -1,3 +1,7 @@
 name James Bloggs; birthday 20/12/1978; pass Gold; mobile 04111111; fee $60
 name Peter Sams; birthday 12/09/1988; pass Bronze; mobile 04111111; fee $40
 name Mark Benvo; birthday 10/11/1988; pass Silver; mobile 04111111; fee $20
+name Sergey Mazurov; birthday 10/11/1988; pass Silver; mobile 04111111; fee $20
+name Luke Evans; birthday 10/11/1988; pass Silver; mobile 05211111; fee $70
+name Luke Evans; birthday 10/11/1988; pass Silver; mobile 04111111; fee $20
+name Luke Evans; birthday 10/11/1988; pass Silver; mobile 05111111; fee $20

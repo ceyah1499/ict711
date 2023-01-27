@@ -1,5 +1,9 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class FileOperation 
@@ -27,8 +31,50 @@ public class FileOperation
 		} 
 	    catch (FileNotFoundException e) 
 	    {
+	    	System.out.println("An error occurred.");
 			e.printStackTrace();
 		}
+	}
+	
+	public void writeToFile(String filename, String content) 
+	{
+		File file = new File(filename);
+		FileWriter fw = null;
+		BufferedWriter bw = null;
+        PrintWriter pw = null;
+	    try 
+	    {
+	    	if (file.createNewFile()) {
+	            System.out.println("File created: " + file.getName());
+			} else {
+				System.out.println("File already exists.");
+			}
+	    	fw = new FileWriter(filename, true);
+	    	bw = new BufferedWriter(fw);
+            pw = new PrintWriter(bw);
+            
+            pw.println(content);
+            System.out.println("Data Successfully appended into file");
+            pw.flush();
+		} 
+	    catch (IOException e) 
+	    {
+	    	System.out.println("An error occurred.");
+			e.printStackTrace();
+		}
+	    finally 
+	    {
+	    	try {
+                pw.close();
+                bw.close();
+                fw.close();
+            } 
+	    	catch (IOException e) 
+	    	{
+	    		System.out.println("An error occurred.");
+				e.printStackTrace();
+            }
+        }
 	}
 	
 	private void lineProcessor(String data) 
@@ -68,7 +114,7 @@ public class FileOperation
 	private void queryFromDatabase(String data) 
 	{
 		String firstWord = data.substring(0, data.indexOf(" "));
-		String restOfString = data.substring(data.indexOf(" "));
+		String restOfString = data.substring(data.indexOf(" ") + 1);
 		
 		switch(firstWord) 
         {
@@ -100,10 +146,28 @@ public class FileOperation
 		if(index == -1) 
 		{
 			Run.membersDatabase.addNewMember(member);
+			this.writeToFile
+			(
+					"src/results.txt", 
+					"Successfully added a new member with name " + member.getName() + 
+					" , birthday " + member.getBirthday() +
+					" , pass type " + member.getPassType() +
+					" , mobile number " + member.getMobile() +
+					" and fee of $" + member.getFee()
+			);
 		} 
 		else 
 		{
 			Run.membersDatabase.updateMember(index, member);
+			this.writeToFile
+			(
+					"src/results.txt", 
+					"Successfully update member with name " + member.getName() + 
+					" and mobile number " + member.getMobile() +
+					" with new details of: birthday " + member.getBirthday() +
+					" , pass type " + member.getPassType() +
+					" and fee of $" + member.getFee()
+			);
 		}
 	}
 	
@@ -115,11 +179,22 @@ public class FileOperation
 		int index = Run.membersDatabase.getIndexOfMember(dataArray[0], dataArray[1]);
 		if(index == -1) 
 		{
-			// Delete unsuccessful
+			this.writeToFile
+			(
+					"src/results.txt", 
+					"Delete unsuccessful, cannot find a member with name " + dataArray[0] + 
+					" and mobile number " + dataArray[1]
+			);
 		} 
 		else 
 		{
 			Run.membersDatabase.deleteMember(index);
+			this.writeToFile
+			(
+					"src/results.txt", 
+					"Successfully deleted member with name " + dataArray[0] + 
+					" and mobile number " + dataArray[1]
+			);
 		}
 	}
 	

@@ -1,0 +1,22 @@
+Result for execution at 2023-01-28T10:15:38.024264300
+
+Successfully added a new member with name James Bloggs , birthday 20/12/1978 , pass type Gold , mobile number 04111111 and fee of $60.0
+Successfully added a new member with name Peter Sams , birthday 12/09/1988 , pass type Bronze , mobile number 04111111 and fee of $40.0
+Successfully added a new member with name Mark Benvo , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
+Successfully added a new member with name Sergey Mazurov , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
+Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 05211111 and fee of $70.0
+Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
+Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 05111111 and fee of $20.0
+Successfully update member with name James Bloggs and mobile number 04111111 with new details of: birthday 20/12/1978 , pass type Gold and fee of $60.0
+Delete unsuccessful, cannot find a member with name James Bloggs and mobile number 04112541
+Result for execution at 2023-01-28T10:15:48.532411500
+
+Successfully added a new member with name James Bloggs , birthday 20/12/1978 , pass type Gold , mobile number 04111111 and fee of $60.0
+Successfully added a new member with name Peter Sams , birthday 12/09/1988 , pass type Bronze , mobile number 04111111 and fee of $40.0
+Successfully added a new member with name Mark Benvo , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
+Successfully added a new member with name Sergey Mazurov , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
+Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 05211111 and fee of $70.0
+Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
+Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 05111111 and fee of $20.0
+Successfully update member with name James Bloggs and mobile number 04111111 with new details of: birthday 20/12/1978 , pass type Gold and fee of $60.0
+Delete unsuccessful, cannot find a member with name James Bloggs and mobile number 04112541
