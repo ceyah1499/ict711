@@ -1,6 +1,15 @@
-/*
-Class Member describes members of a database. Contains variables, constructor, getters and setters
-*/
+/**
+ * Function name: Member file
+ * 
+ * Description: 
+ * 1. The method fetch the member file with basic information in a predefined format.
+ * 
+ * It contains variables, constructor, getters and setters
+ * 
+ * 
+ */
+
+
 public class Member
 
 {
