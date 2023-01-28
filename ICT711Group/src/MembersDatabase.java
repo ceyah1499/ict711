@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 public class MembersDatabase 
 {
 	private ArrayList<Member> membersList;
-	
+// creating an array list filled with members
 	public MembersDatabase() 
 	{
 		membersList = new ArrayList<Member>();
@@ -23,12 +23,12 @@ public class MembersDatabase
 		
 		return copy;
 	}
-	
+// receiving number of members from the list
 	public int getCount() 
 	{
 		return membersList.size();
 	}
-	
+// searching the member's index inside the array
 	public int getIndexOfMember(String name, String mobile) 
 	{
 		for (int i = 0; i < membersList.size(); i++) 
@@ -41,12 +41,12 @@ public class MembersDatabase
 		
 		return -1;
 	}
-	
+// adding a new member in the array list
 	public void addNewMember(Member member) 
 	{
 		membersList.add(member);
 	}
-	
+// updating a member in the array list
 	public void updateMember(int index, Member member) 
 	{
 		membersList.get(index).setName(member.getName());
@@ -55,12 +55,12 @@ public class MembersDatabase
 		membersList.get(index).setMobile(member.getMobile());
 		membersList.get(index).setFee(member.getFee());
 	}
-	
+// deleting a member from the array list
 	public void deleteMember(int index) 
 	{
 		membersList.remove(index);
 	}
-	
+// collecting information about all members in an array
 	public String[] printArrayList(ArrayList<Member> arrayList) 
 	{
 		String[] stringArray = new String[arrayList.size()];
@@ -81,7 +81,7 @@ public class MembersDatabase
 		
 		return stringArray;
 	}
-	
+// sorting the list of members
 	private void sortArrayList(ArrayList<Member> arrayList) 
 	{
 		MemberNameComparator nameComparator = new MemberNameComparator();
@@ -102,7 +102,7 @@ public class MembersDatabase
 		arrayList.sort(mobileComparator);
 		arrayList.sort(nameComparator);
 	}
-	
+// Query the membership records of a given pass type and calculate the total membership fees
 	public void runQueryPassType(String passType) 
 	{
 		ArrayList<Member> copy = new ArrayList<Member>();
@@ -137,7 +137,7 @@ public class MembersDatabase
 				"---------------------\n"
 		;
 	}
-	
+// Query the age-based fee income distribution	
 	public void runQueryAgeFee() 
 	{
 		LocalDate currentDate = LocalDate.now();

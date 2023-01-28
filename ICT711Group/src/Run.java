@@ -6,7 +6,7 @@ public class Run
 	static boolean saveEnabled = false;
 	static String resultsContent = "";
 	static String reportsContent = "";
-	
+// reading members file and instructions file; writing to results and reports files
 	public static void main(String[] args) 
 	{
 		FileOperation fileOp = new FileOperation();
