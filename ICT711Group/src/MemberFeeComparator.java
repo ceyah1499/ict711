@@ -1,6 +1,8 @@
+// class MemberFeeComparator is inherited from MemberComparator class
 public class MemberFeeComparator extends MemberComparator
 {
-	@Override
+	@Override // child class method is over-writing its base class method
+// method "compare" compares members by fee
 	public int compare(Member e1, Member e2)
 	{
 		if(e1.getFee() == e2.getFee()) 
