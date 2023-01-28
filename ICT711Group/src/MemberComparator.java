@@ -3,7 +3,7 @@ import java.util.Comparator; // for sorting objects
 /**
  * Function name: Member Comparator
  * 
- * Description: The class MemberComparator implements an interface Comparator
+ * Description: The class MemberComparator implements an interface Comparator and sort objects.
  * 
  */
 
