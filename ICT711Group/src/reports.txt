@@ -1,67 +1,16 @@
-Report for execution at 2023-01-28T10:15:38.024264300
-
-----Before sorting---
-Mark Benvo, 10/11/1988, Silver, 04111111, $20.0
-Sergey Mazurov, 10/11/1988, Silver, 04111111, $20.0
-Luke Evans, 10/11/1988, Silver, 05211111, $70.0
-Luke Evans, 10/11/1988, Silver, 04111111, $20.0
-Luke Evans, 10/11/1988, Silver, 05111111, $20.0
----------------------
-
-----After sorting----
-Luke Evans, 10/11/1988, Silver, 04111111, $20.0
-Luke Evans, 10/11/1988, Silver, 05111111, $20.0
-Luke Evans, 10/11/1988, Silver, 05211111, $70.0
-Mark Benvo, 10/11/1988, Silver, 04111111, $20.0
-Sergey Mazurov, 10/11/1988, Silver, 04111111, $20.0
----------------------
+Report for execution at 2023-01-28T11:49:29.424788400
 
 ---query pass type---
 Pass Type: Silver
 Total Club Member size: 5
 Total membership fees: $150.0
 ---------------------
-
 ----query age fee----
 Total Club Member size: 7
 Age based fee income distribution
 [0,8]: $0.0
 [8,18]: $0.0
-[18,65]: $250.0
-[65,-]: $0.0
-Unknown: $0.0
----------------------
-
-Report for execution at 2023-01-28T10:15:48.532411500
-
-----Before sorting---
-Mark Benvo, 10/11/1988, Silver, 04111111, $20.0
-Sergey Mazurov, 10/11/1988, Silver, 04111111, $20.0
-Luke Evans, 10/11/1988, Silver, 05211111, $70.0
-Luke Evans, 10/11/1988, Silver, 04111111, $20.0
-Luke Evans, 10/11/1988, Silver, 05111111, $20.0
----------------------
-
-----After sorting----
-Luke Evans, 10/11/1988, Silver, 04111111, $20.0
-Luke Evans, 10/11/1988, Silver, 05111111, $20.0
-Luke Evans, 10/11/1988, Silver, 05211111, $70.0
-Mark Benvo, 10/11/1988, Silver, 04111111, $20.0
-Sergey Mazurov, 10/11/1988, Silver, 04111111, $20.0
----------------------
-
----query pass type---
-Pass Type: Silver
-Total Club Member size: 5
-Total membership fees: $150.0
----------------------
-
-----query age fee----
-Total Club Member size: 7
-Age based fee income distribution
-[0,8]: $0.0
-[8,18]: $0.0
-[18,65]: $250.0
+[18,65]: $240.0
 [65,-]: $0.0
 Unknown: $0.0
 ---------------------

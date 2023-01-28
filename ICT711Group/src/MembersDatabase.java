@@ -6,7 +6,6 @@ import java.time.format.DateTimeFormatter;
 public class MembersDatabase 
 {
 	private ArrayList<Member> membersList;
-	private FileOperation fileOp = new FileOperation();
 	
 	public MembersDatabase() 
 	{
@@ -92,12 +91,12 @@ public class MembersDatabase
 		String[] stringArray = this.printArrayList(arrayList);
 		
 		// Before sorting
-		fileOp.writeToFile("src/reports.txt", "----Before sorting---");
+		Run.resultsContent += "----Before sorting---\n";
 		for (String element: stringArray) 
 		{
-			fileOp.writeToFile("src/reports.txt", element);
+			Run.resultsContent += element + "\n";
 		}
-		fileOp.writeToFile("src/reports.txt", "---------------------\n");
+		Run.resultsContent += "---------------------\n";
 		
 		arrayList.sort(feeComparator);
 		arrayList.sort(mobileComparator);
@@ -123,22 +122,20 @@ public class MembersDatabase
 		String[] stringArray = this.printArrayList(copy);
 		
 		// After sorting
-		fileOp.writeToFile("src/reports.txt", "----After sorting----");
+		Run.resultsContent += "----After sorting----\n";
 		for (String element: stringArray) 
 		{
-			fileOp.writeToFile("src/reports.txt", element);
+			Run.resultsContent += element + "\n";
 		}
-		fileOp.writeToFile("src/reports.txt", "---------------------\n");
+		Run.resultsContent += "---------------------\n";
 		
-		fileOp.writeToFile
-		(
-				"src/reports.txt", 
+		Run.reportsContent += 
 				"---query pass type---\n" + 
 				"Pass Type: " + passType + "\n" +
 				"Total Club Member size: " + copy.size() + "\n" +
 				"Total membership fees: $" + totalFee + "\n" +
 				"---------------------\n"
-		);
+		;
 	}
 	
 	public void runQueryAgeFee() 
@@ -180,9 +177,7 @@ public class MembersDatabase
 			}
 		}
 		
-		fileOp.writeToFile
-		(
-			"src/reports.txt", 
+		Run.reportsContent += 
 			"----query age fee----\n" + 
 			"Total Club Member size: " + this.getCount() + "\n" +
 			"Age based fee income distribution\n" + 
@@ -192,6 +187,6 @@ public class MembersDatabase
 			"[65,-]: $" + incomeD + "\n" + 
 			"Unknown: $" + incomeE + "\n" + 
 			"---------------------\n"
-		);
+		;
 	}
 }

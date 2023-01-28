@@ -1,5 +1,6 @@
-add name James Bloggs; birthday 20/12/1978; pass Gold; mobile 04111111; fee $60
+add name James Bloggs; birthday 20/12/1978; pass Gold; mobile 04111111; fee $50
 delete James Bloggs; 04112541
+delete James Bloggs Duplicate; 04111111
 query pass Silver
 query age fee
 save
