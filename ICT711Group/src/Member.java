@@ -1,11 +1,16 @@
-public class Member 
+/*
+Class Member describes members of a database. Contains variables, constructor, getters and setters
+*/
+public class Member
+
 {
+	// local variables
 	private String name;
 	private String birthday;
 	private String passType;
 	private String mobile;
 	private double fee;
-	
+	// constructor
 	public Member(String name, String birthday, String passType, String mobile, double fee) 
 	{
 		this.name = name;
@@ -14,7 +19,7 @@ public class Member
 		this.mobile = mobile;
 		this.fee = fee;
 	}
-
+	// getters and setters
 	public String getName() 
 	{
 		return name;
