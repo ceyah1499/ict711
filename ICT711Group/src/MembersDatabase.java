@@ -3,6 +3,25 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
+
+/**
+ * Function name: Members database
+ * 
+ * Description: 
+ * 1. create an array list filled with members
+ * 2. receive number of members from the list
+ * 3. search the member's index inside the array
+ * 4. add a new member in the array list
+ * 5. update a member in the array list
+ * 6. delete a member from the array list
+ * 7. collect information about all members in an array
+ * 8. sort the list of members
+ * 9. query the membership records of a given pass type and calculate the total membership fees
+ * 10. query the age-based fee income distribution
+ * 
+ *
+ */
+
 public class MembersDatabase 
 {
 	private ArrayList<Member> membersList;
