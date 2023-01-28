@@ -8,11 +8,12 @@ import java.util.Scanner; // used for obtaining the input the data from outside 
 
 public class FileOperation // class FileOperation  
 {
-	private String name = ""; // variable
-	private String birthday = ""; // variable
-	private String passType = ""; // variable
-	private String mobile = ""; // variable
-	private Double fee = 0.0; // variable
+	// local variables
+	private String name = "";
+	private String birthday = "";
+	private String passType = "";
+	private String mobile = "";
+	private Double fee = 0.0;
 	
 	public void readFromFile(String filename) // method that reads information from the file; takes a filename 
 	{
@@ -38,7 +39,8 @@ public class FileOperation // class FileOperation
 	
 	public void writeToFile(String filename, String content) // method that writes information to a file; takes a filename and a string that will be recorded
 	{
-		File file = new File(filename); // creating a new object of File class
+		// objects initialization
+		File file = new File(filename);
 		FileWriter fw = null;
 		BufferedWriter bw = null;
         PrintWriter pw = null;
