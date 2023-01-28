@@ -147,7 +147,10 @@ public class FileOperation // class FileOperation
 	
 	/**
 	 * Function name: Database query
-	 * Description
+	 * Description: 
+	 * 1. Query the list of members by extract the first word in a string and write it to a variable firstWord
+	 * 2. Extract the rest of the string and write it to a variable restOfString
+	 * Note:Choose the action depending on the first word that appears in a string
 	 * 
 	 * @param data
 	 */
