@@ -1,3 +1,15 @@
+
+/**
+ * Function name: Member Name Comparator
+ * 
+ * Description: 
+ * The class MemberNameComparator is inherited from MemberComparator class
+ * 
+ * The method "compare" compares members by name
+ *
+ */
+
+
 // class MemberNameComparator is inherited from MemberComparator class
 public class MemberNameComparator extends MemberComparator
 {
