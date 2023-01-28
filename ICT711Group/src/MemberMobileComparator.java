@@ -1,6 +1,6 @@
 
 /**
- * Function Name: Member Mobile Comparitor
+ * Function Name: Member Mobile Comparator
  * 
  * Description: 
  * The class MemberMobileComparator is inherited from MemberComparator class
