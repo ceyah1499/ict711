@@ -106,7 +106,7 @@ public class FileOperation
 	        	this.queryFromDatabase(restOfString);
 	        	break;
 	        case "save":
-	        	this.save();
+	        	Run.saveEnabled = true;
 	        	break;
         }
 	}
@@ -130,11 +130,6 @@ public class FileOperation
         }
 	}
 	
-	private void save() 
-	{
-		// TO DO
-	}
-	
 	private void upsertToDatabase(String data) 
 	{
 		String[] dataArray = new String[5];
@@ -146,28 +141,24 @@ public class FileOperation
 		if(index == -1) 
 		{
 			Run.membersDatabase.addNewMember(member);
-			this.writeToFile
-			(
-					"src/results.txt", 
+			Run.resultsContent +=  
 					"Successfully added a new member with name " + member.getName() + 
 					" , birthday " + member.getBirthday() +
 					" , pass type " + member.getPassType() +
 					" , mobile number " + member.getMobile() +
-					" and fee of $" + member.getFee()
-			);
+					" and fee of $" + member.getFee() + "\n"
+			;
 		} 
 		else 
 		{
 			Run.membersDatabase.updateMember(index, member);
-			this.writeToFile
-			(
-					"src/results.txt", 
+			Run.resultsContent += 
 					"Successfully update member with name " + member.getName() + 
 					" and mobile number " + member.getMobile() +
 					" with new details of: birthday " + member.getBirthday() +
 					" , pass type " + member.getPassType() +
-					" and fee of $" + member.getFee()
-			);
+					" and fee of $" + member.getFee() + "\n"
+			;
 		}
 	}
 	
@@ -179,22 +170,18 @@ public class FileOperation
 		int index = Run.membersDatabase.getIndexOfMember(dataArray[0], dataArray[1]);
 		if(index == -1) 
 		{
-			this.writeToFile
-			(
-					"src/results.txt", 
+			Run.resultsContent += 
 					"Delete unsuccessful, cannot find a member with name " + dataArray[0] + 
-					" and mobile number " + dataArray[1]
-			);
+					" and mobile number " + dataArray[1] + "\n"
+			;
 		} 
 		else 
 		{
 			Run.membersDatabase.deleteMember(index);
-			this.writeToFile
-			(
-					"src/results.txt", 
+			Run.resultsContent += 
 					"Successfully deleted member with name " + dataArray[0] + 
-					" and mobile number " + dataArray[1]
-			);
+					" and mobile number " + dataArray[1] + "\n"
+			;
 		}
 	}
 	

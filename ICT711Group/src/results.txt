@@ -1,22 +1,29 @@
-Result for execution at 2023-01-28T10:15:38.024264300
+Result for execution at 2023-01-28T11:49:29.424788400
 
 Successfully added a new member with name James Bloggs , birthday 20/12/1978 , pass type Gold , mobile number 04111111 and fee of $60.0
+Successfully added a new member with name James Bloggs Duplicate , birthday 20/12/1978 , pass type Gold , mobile number 04111111 and fee of $60.0
 Successfully added a new member with name Peter Sams , birthday 12/09/1988 , pass type Bronze , mobile number 04111111 and fee of $40.0
 Successfully added a new member with name Mark Benvo , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
 Successfully added a new member with name Sergey Mazurov , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
 Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 05211111 and fee of $70.0
 Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
 Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 05111111 and fee of $20.0
-Successfully update member with name James Bloggs and mobile number 04111111 with new details of: birthday 20/12/1978 , pass type Gold and fee of $60.0
+Successfully update member with name James Bloggs and mobile number 04111111 with new details of: birthday 20/12/1978 , pass type Gold and fee of $50.0
 Delete unsuccessful, cannot find a member with name James Bloggs and mobile number 04112541
-Result for execution at 2023-01-28T10:15:48.532411500
+Successfully deleted member with name James Bloggs Duplicate and mobile number 04111111
+----Before sorting---
+Mark Benvo, 10/11/1988, Silver, 04111111, $20.0
+Sergey Mazurov, 10/11/1988, Silver, 04111111, $20.0
+Luke Evans, 10/11/1988, Silver, 05211111, $70.0
+Luke Evans, 10/11/1988, Silver, 04111111, $20.0
+Luke Evans, 10/11/1988, Silver, 05111111, $20.0
+---------------------
+----After sorting----
+Luke Evans, 10/11/1988, Silver, 04111111, $20.0
+Luke Evans, 10/11/1988, Silver, 05111111, $20.0
+Luke Evans, 10/11/1988, Silver, 05211111, $70.0
+Mark Benvo, 10/11/1988, Silver, 04111111, $20.0
+Sergey Mazurov, 10/11/1988, Silver, 04111111, $20.0
+---------------------
 
-Successfully added a new member with name James Bloggs , birthday 20/12/1978 , pass type Gold , mobile number 04111111 and fee of $60.0
-Successfully added a new member with name Peter Sams , birthday 12/09/1988 , pass type Bronze , mobile number 04111111 and fee of $40.0
-Successfully added a new member with name Mark Benvo , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
-Successfully added a new member with name Sergey Mazurov , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
-Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 05211111 and fee of $70.0
-Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 04111111 and fee of $20.0
-Successfully added a new member with name Luke Evans , birthday 10/11/1988 , pass type Silver , mobile number 05111111 and fee of $20.0
-Successfully update member with name James Bloggs and mobile number 04111111 with new details of: birthday 20/12/1978 , pass type Gold and fee of $60.0
-Delete unsuccessful, cannot find a member with name James Bloggs and mobile number 04112541
+
