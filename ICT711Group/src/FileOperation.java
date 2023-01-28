@@ -108,7 +108,7 @@ public class FileOperation // class FileOperation
 	 * Description: The method that processes using strings. The commands: "add", 
 	 * "delete", "query" and "save".
 	 * 
-	 * @param data
+	 * @param data (String)
 	 */
 	
 	private void lineProcessor(String data) // method that processes strings 
@@ -152,7 +152,7 @@ public class FileOperation // class FileOperation
 	 * 2. Extract the rest of the string and write it to a variable restOfString
 	 * Note:Choose the action depending on the first word that appears in a string
 	 * 
-	 * @param data
+	 * @param data (String)
 	 */
 	
 	
@@ -174,6 +174,15 @@ public class FileOperation // class FileOperation
 	        	break; // terminate switch statement
         }
 	}
+	
+	/**
+	 * Function name: Insert data to database
+	 * Description: 
+	 * >> This method insert the data into the database creating an 
+	 * array that contains name, birthday, pass, mobile and fee of the member
+	 * 
+	 * @param data (String)
+	 */
 	
 	private void upsertToDatabase(String data) // a method to insert the data into the database 
 	{
@@ -207,6 +216,18 @@ public class FileOperation // class FileOperation
 		}
 	}
 	
+	/**
+	 * Function name: Delete from database
+	 * Description: 
+	 * 1. Method to delete the existing data from the database
+	 * 2. This also check if the member exists and 
+	 * 3. If not running the method show a user information about an unsuccessful deleting
+	 * 
+	 * @param data (String)
+	 * 
+	 */
+	
+	
 	private void deleteFromDatabase(String data) // a method to delete the existing data from the database
 	{
 		String[] dataArray = new String[2]; // creating a new array that contains two elements
@@ -229,6 +250,13 @@ public class FileOperation // class FileOperation
 			;
 		}
 	}
+	
+	/**
+	 * Function name: Assigner 
+	 * Description: Add valid membership info into the system
+	 * 
+	 * @param dataArray (String)
+	 */
 	
 	private void assigner(String[] dataArray)  // assigning data to member according to the information contained in a string 
 	{
