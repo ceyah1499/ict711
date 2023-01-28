@@ -6,6 +6,8 @@ import java.io.BufferedWriter; // provides buffering to make the performance fas
 import java.io.PrintWriter; // prints formatted representations of objects to a text-output stream
 import java.util.Scanner; // used for obtaining the input the data from outside the application
 
+
+
 public class FileOperation // class FileOperation  
 {
 	// local variables
@@ -14,6 +16,15 @@ public class FileOperation // class FileOperation
 	private String passType = "";
 	private String mobile = "";
 	private Double fee = 0.0;
+	
+
+/**
+ * Function name: Read from file
+ * Description: The method reads the information from the file
+ * 
+ * @param filename (String)
+ * 
+ */
 	
 	public void readFromFile(String filename) // method that reads information from the file; takes a filename 
 	{
@@ -36,6 +47,19 @@ public class FileOperation // class FileOperation
 			e.printStackTrace(); // showing the details of the error
 		}
 	}
+	
+	/**
+	 * Function name: Write to file
+	 * Description: 
+	 * 1. Write the information to a file 
+	 * 2. Get the @param filename and a string that will be recorded
+	 * 
+	 * 
+	 * @param filename (String)
+	 * @param content  (String)
+	 * 
+	 */
+	
 	
 	public void writeToFile(String filename, String content) // method that writes information to a file; takes a filename and a string that will be recorded
 	{
@@ -79,6 +103,14 @@ public class FileOperation // class FileOperation
         }
 	}
 	
+	/**
+	 * Function name: 
+	 * Description: The method that processes using strings. The commands: "add", 
+	 * "delete", "query" and "save".
+	 * 
+	 * @param data
+	 */
+	
 	private void lineProcessor(String data) // method that processes strings 
 	{
 		String firstWord = ""; // variable
@@ -112,6 +144,14 @@ public class FileOperation // class FileOperation
 	        	break; // terminate switch statement
         }
 	}
+	
+	/**
+	 * Function name: Database query
+	 * Description
+	 * 
+	 * @param data
+	 */
+	
 	
 	private void queryFromDatabase(String data)  // query the list of members
 	{
